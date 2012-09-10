@@ -25,12 +25,14 @@
     <item>Nezobrazovat</item>
   </string-array>
   <string-array name="battery_icon_entries">
-		<item>Pouze ikona</item>
-		<item>Pouze text</item>
-		<item>Ikona s textem</item>
-		<item>Ikona s vycentrovaným textem</item>
-		<item>CircleMOD</item>
-		<item>Nezobrazovat</item>
+	<item>Pouze ikona</item>
+	<item>Pouze text</item>
+	<item>Ikona s textem</item>
+	<item>Ikona s vycentrovaným textem</item>
+	<item>CircleMOD</item>
+        <item>Honeycomb style</item>
+        <item>GummyBar style</item>
+	<item>Nezobrazovat</item>
 	</string-array>
   <string-array name="pref_navigation_menu_entries">
 		<item>Vpravo</item>

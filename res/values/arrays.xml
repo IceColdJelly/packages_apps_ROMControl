@@ -105,6 +105,8 @@
         <item>Icon with text</item>
         <item>Icon with centered text</item>
         <item>CircleMOD</item>
+        <item>Honeycomb style</item>
+        <item>GummyBar style</item>
         <item>Hide</item>
     </string-array>
     <string-array name="battery_icon_values" translatable="false">
@@ -114,6 +116,8 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
+        <item>7</item>
     </string-array>
 
     <!-- NavBar -->

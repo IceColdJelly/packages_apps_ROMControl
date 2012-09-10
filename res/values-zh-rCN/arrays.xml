@@ -57,6 +57,8 @@
         <item>带文字的图标</item>
         <item>带居中文字的图标</item>
         <item>环形电量图标</item>
+        <item>Honeycomb style</item>
+        <item>GummyBar style</item>
         <item>隐藏</item>
     </string-array>
 
