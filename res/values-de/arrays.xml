@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- boot animation stuff -->
+    <string-array name="disable_bootanimation_insults">
+        <item>Jerk!</item>
+        <item>ProTekk!</item>
+    </string-array>
+
+    <!-- clock stuff -->
+    <string-array name="clock_style_entries">
+        <item>Uhr rechts</item>
+        <item>Uhr mittig</item>
+        <item>Uhr ausblenden</item>
+    </string-array>
+    <string-array name="clock_ampm_entries">
+        <item>Ausblenden</item>
+        <item>AM/PM klein</item>
+        <item>AM/PM normal</item>
+        <item>ProTekk O\'Clock</item>
+    </string-array>
+    <string-array name="clock_weekday_entries">
+        <item>Ausblenden</item>
+        <item>Wochentag klein</item>
+        <item>Wochentag normal</item>
+    </string-array>
+
+    <!-- toggle style -->
+    <string-array name="toggle_style_entries">
+        <item>Nur Symbol</item>
+        <item>Nur Text</item>
+    </string-array>
+    <string-array name="toggles_layout_images">
+        <item>@drawable/toggle_layout_switches</item>
+        <item>@drawable/toggle_layout_buttons</item>
+    </string-array>
+    <string-array name="toggles_layout_entries">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+
+    <!-- Brightness slider -->
+    <string-array name="brightness_location_entries">
+        <item>Oberhalb</item>
+        <item>Unterhalb</item>
+        <item>Ausblenden</item>
+    </string-array>
+
+    <!-- Battery styles -->
+    <string-array name="battery_icon_entries">
+        <item>Nur Symbol</item>
+        <item>Nur Text</item>
+        <item>Symbol mit Text</item>
+        <item>Symbol mit zentriertem Text</item>
+        <item>CircleMOD</item>
+        <item>Honeycomb style</item>
+        <item>GummyBar style</item>
+        <item>Ausblenden</item>
+    </string-array>
+
+    <!-- NavBar -->
+    <string-array name="pref_navigation_menu_entries">
+        <item>Rechts</item>
+        <item>Links</item>
+        <item>Beide</item>
+        <item>Entfernen</item>
+    </string-array>
+
+    <!-- right is the default, easier to keep 0 as first index -->
+    <string-array name="pref_navigation_menu_display_entries">
+        <item>Standard JB behavior</item>
+        <item>Ausgeblendete immer zeigen</item>
+        <item>Immer zeigen</item>
+        <item>Standard JB mit unsichtbaren wenn ausgeblendet</item>
+    </string-array>
+    <string-array name="navbar_button_entries">
+        <item>Home</item>
+        <item>Zurueck</item>
+        <item>Letzte</item>
+        <item>Suchen</item>
+        <item>Menue</item>
+        <item>Widgets wechseln</item>
+        <item>Öffnen IME Switcher</item>
+        <item>Anwendung beenden</item>
+        <item>Energie</item>
+        <item>Benachrichtigungen</item>
+        <item>Benutzerdefinierte Anwendung</item>
+        <item>Leer</item>
+    </string-array>
+    <string-array name="navigation_bar_width_entries">
+        <item>42 dp (standard)</item>
+        <item>36 dp</item>
+        <item>30 dp</item>
+        <item>24 dp</item>
+    </string-array>
+    <string-array name="navigation_bar_height_entries">
+        <item>48 dp (standard)</item>
+        <item>44 dp</item>
+        <item>40 dp</item>
+        <item>36 dp</item>
+        <item>30 dp</item>
+        <item>24 dp</item>
+    </string-array>
+    <string-array name="navigation_bar_height_landscape_entries">
+        <item>48 dp (standard)</item>
+        <item>42 dp</item>
+        <item>36 dp</item>
+        <item>30 dp</item>
+        <item>24 dp</item>
+    </string-array>
+    <string-array name="battery_bar_entries">
+        <item>Verstecken</item>
+        <item>Status-Bar</item>
+        <item>Oberhalb der Navigations-Bar</item>
+        <item>Unterhalb der Navigations-Bar</item>
+    </string-array>
+    <string-array name="battery_bar_style_entries">
+        <item>Normal linksbuendig</item>
+        <item>Mittig-gespiegelt</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_entries">
+        <item>1 dp</item>
+        <item>2 dp</item>
+        <item>3 dp</item>
+        <item>4 dp</item>
+    </string-array>
+
+    <!-- LED Values -->
+    <string-array name="led_entries">
+        <item>.2 Sekunden</item>
+        <item>.5 Sekunden</item>
+        <item>1 Sekunde</item>
+        <item>1.5 Sekunden</item>
+        <item>2 Sekunden</item>
+        <item>2.5 Sekunden</item>
+        <item>3 Sekunden</item>
+        <item>3.5 Sekunden</item>
+        <item>4 Sekunden</item>
+        <item>4.5 Sekunden</item>
+        <item>5 Sekunden</item>
+        <item>5.5 Sekunden</item>
+        <item>6 Sekunden</item>
+        <item>7 Sekunden</item>
+        <item>8 Sekunden</item>
+        <item>9 Sekunden</item>
+        <item>10 Sekunden</item>
+    </string-array>
+
+    <string-array name="headphone_audio_mode_entries">
+        <item>@string/headphones_mode_no_action</item>
+        <item>@string/headphones_mode_vibrate</item>
+        <item>@string/headphones_mode_silent</item>
+    </string-array>
+    <string-array name="phone_call_flip_entries">
+        <item>Deaktiviert</item>
+        <item>Aktiviert</item>
+    </string-array>
+
+    <!-- Flip up/down arrays -->
+    <string-array name="flip_entries">
+        <item>.5 Sekunden</item>
+        <item>1 Sekunde</item>
+        <item>1.5 Sekunden</item>
+        <item>2 Sekunden</item>
+        <item>2.5 Sekunden</item>
+        <item>3 Sekunden</item>
+        <item>3.5 Sekunden</item>
+        <item>4 Sekunden</item>
+        <item>4.5 Sekunden</item>
+        <item>5 Sekunden</item>
+        <item>5.5 Sekunden</item>
+        <item>6 Sekunden</item>
+        <item>7 Sekunden</item>
+        <item>8 Sekunden</item>
+        <item>9 Sekunden</item>
+        <item>10 Sekunden</item>
+    </string-array>
+
+    <string-array name="flip_screenoff_entries">
+        <item>0 Sekunden (Immer aus)</item>
+        <item>5 Sekunden</item>
+        <item>10 Sekunde</item>
+        <item>15 Sekunden</item>
+        <item>30 Sekunden</item>
+        <item>45 Sekunden</item>
+        <item>1 Minute</item>
+        <item>1.5 Minuten</item>
+        <item>2 Minuten</item>
+        <item>2.5 Minuten</item>
+        <item>3 Minuten</item>
+        <item>3.5 Minuten</item>
+        <item>4 Minuten</item>
+        <item>5 Minuten</item>
+    </string-array>
+
+    <!-- weather arrays -->
+    <string-array name="weather_interval_entries">
+        <item>Aus</item>
+        <item>1 Minute</item>
+        <item>5 Minuten</item>
+        <item>10 Minuten</item>
+        <item>30 Minuten</item>
+        <item>45 Minuten</item>
+        <item>60 Minuten</item>
+        <item>2 Stunden</item>
+        <item>3 Stunden</item>
+        <item>4 Stunden</item>
+        <item>6 Stunden</item>
+        <item>8 Stunden</item>
+    </string-array>
+
+    <string-array name="minfree">
+        <item>25mb</item>
+        <item>50mb</item>
+        <item>75mb</item>
+        <item>80mb</item>
+        <item>100mb</item>
+    </string-array>
+
+    <string-array name="minfree_values">
+        <item>1536,2048,4096,5120,5632,6144</item>
+        <item>2560,3840,6400,7680,10240,12800</item>
+        <item>2560,3840,6400,10240,12800,19200</item>
+        <item>2048,3072,6144,15360,17920,20480</item>
+        <item>2560,3840,6400,12800,12800,25600</item>
+    </string-array>
+
+    <string-array name="less_notification_sounds_entries">
+        <item>Standard Verhalten</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>15s</item>
+        <item>30s</item>
+        <item>45s</item>
+        <item>1m</item>
+        <item>2m</item>
+    </string-array>
+
+</resources>
