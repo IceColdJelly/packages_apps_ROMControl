@@ -22,11 +22,13 @@ public class StatusBarClock extends AOKPPreferenceFragment implements
     private static final String PREF_AM_PM_STYLE = "clock_am_pm_style";
     private static final String PREF_COLOR_PICKER = "clock_color";
     private static final String PREF_CLOCK_WEEKDAY = "clock_weekday";
+    private static final String STATUS_BAR_TRANSPARENCY = "status_bar_transparency";
 
     ListPreference mClockStyle;
     ListPreference mClockAmPmstyle;
     ColorPickerPreference mColorPicker;
     ListPreference mClockWeekday;
+    ListPreference mStatusbarTransparency;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,13 @@ public class StatusBarClock extends AOKPPreferenceFragment implements
         mClockWeekday.setValue(Integer.toString(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.STATUSBAR_CLOCK_WEEKDAY,
                 0)));
+
+        mStatusbarTransparency = (ListPreference) findPreference(STATUS_BAR_TRANSPARENCY);
+        mStatusbarTransparency.setOnPreferenceChangeListener(this);
+        mClockWeekday.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUS_BAR_TRANSPARENCY,
+                0)));
+        
 
     }
 
@@ -87,6 +96,10 @@ public class StatusBarClock extends AOKPPreferenceFragment implements
             int val = Integer.parseInt((String) newValue);
             result = Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_CLOCK_WEEKDAY, val);
+        } else if (preference == mStatusbarTransparency) {
+            int val = Integer.parseInt((String) newValue);
+            result = Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_TRANSPARENCY, val);
         }
         return result;
     }
