@@ -13,11 +13,9 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceGroup;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.content.res.Configuration;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,15 +71,7 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements OnPrefer
         mBrightnessLocation = (ListPreference) findPreference(PREF_BRIGHTNESS_LOC);
         mBrightnessLocation.setOnPreferenceChangeListener(this);
         mBrightnessLocation.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUSBAR_TOGGLES_BRIGHTNESS_LOC, 3)));
-
-        boolean isFullTablet = isScreenLarge();
-        boolean mTabletui = Settings.System.getBoolean(mContext.getContentResolver(),
-                           Settings.System.MODE_TABLET_UI, false);
-
-        if (isFullTablet || mTabletui) {
-            ((PreferenceGroup) findPreference("advanced_cat")).removePreference(mBrightnessLocation);
-        }
+                .getContentResolver(), Settings.System.STATUSBAR_TOGGLES_BRIGHTNESS_LOC, 1)));
 
         mToggleStyle = (ListPreference) findPreference(PREF_TOGGLES_STYLE);
         mToggleStyle.setOnPreferenceChangeListener(this);
@@ -438,10 +428,4 @@ public class StatusBarToggles extends AOKPPreferenceFragment implements OnPrefer
 
         return iloveyou;
     }
-   public boolean isScreenLarge() {
-        final int screenSize = Resources.getSystem().getConfiguration().screenLayout &
-                   Configuration.SCREENLAYOUT_SIZE_MASK;
-        boolean isScreenLarge = screenSize == Configuration.SCREENLAYOUT_SIZE_XLARGE;
-        return isScreenLarge;
-        }
 }
