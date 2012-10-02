@@ -70,6 +70,7 @@ public class Lockscreens extends AOKPPreferenceFragment implements
     private static final String PREF_LOCKSCREEN_BATTERY = "lockscreen_battery";
     private static final String PREF_LOCKSCREEN_TEXT_COLOR = "lockscreen_text_color";
     private static final String PREF_LOCKSCREEN_MENU_UNLOCK = "lockscreen_menu_unlock";
+    private static final String PREF_LOCKSCREEN_TRANSPARENT = "lockscreen_transparent";
     private static final String PREF_VOLUME_ROCKER_WAKE = "volume_rocker_wake";
     private static final String PREF_USER_OVERRIDE = "lockscreen_user_timeout_override";
     private static final String PREF_LOCKSCREEN_WEATHER = "lockscreen_weather";
@@ -101,6 +102,7 @@ public class Lockscreens extends AOKPPreferenceFragment implements
     CheckBoxPreference mLockscreenBattery;
     ColorPickerPreference mLockscreenTextColor;
     CheckBoxPreference mLockscreenMenuUnlock;
+    CheckBoxPreference mLockscreenTransparent;
     CheckBoxPreference mVolumeMusic;
     CheckBoxPreference mVolumeRockerWake;
     CheckBoxPreference mLockScreenTimeoutUserOverride;
@@ -141,6 +143,10 @@ public class Lockscreens extends AOKPPreferenceFragment implements
         mLockscreenMenuUnlock = (CheckBoxPreference) findPreference(PREF_LOCKSCREEN_MENU_UNLOCK);
         mLockscreenMenuUnlock.setChecked(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.LOCKSCREEN_MENU_UNLOCK, 0) == 1);
+
+        mLockscreenTransparent = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_TRANSPARENT);
+        mLockscreenTransparent.setChecked(Settings.System.getBoolean(mContext
+                .getContentResolver(), Settings.System.LOCKSCREEN_TRANSPARENT, false));
 
         mVolumeRockerWake = (CheckBoxPreference) findPreference(PREF_VOLUME_ROCKER_WAKE);
         mVolumeRockerWake.setChecked(Settings.System.getBoolean(mContext
@@ -245,6 +251,11 @@ public class Lockscreens extends AOKPPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_MENU_UNLOCK,
                     ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mLockscreenTransparent) {
+            Settings.System.putBoolean(mContext.getContentResolver(),
+                    Settings.System.LOCKSCREEN_TRANSPARENT,
+                    ((CheckBoxPreference) preference).isChecked());
             return true;
         } else if (preference == mVolumeRockerWake) {
             Settings.System.putBoolean(mContext.getContentResolver(),

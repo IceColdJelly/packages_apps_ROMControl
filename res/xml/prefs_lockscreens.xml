@@ -179,6 +179,11 @@
             android:title="@string/lockscreen_vibrate_disabled_title"
             android:summary="@string/lockscreen_vibrate_disabled_summary" />
 
+    <CheckBoxPreference
+            android:key="lockscreen_transparent"
+            android:title="@string/lockscreen_transparent_title"
+            android:summary="@string/lockscreen_transparent_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
