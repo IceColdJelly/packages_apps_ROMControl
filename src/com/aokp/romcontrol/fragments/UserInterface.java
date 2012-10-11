@@ -87,7 +87,7 @@ public class UserInterface extends AOKPPreferenceFragment {
     private static final String PREF_MODE_TABLET_UI = "mode_tabletui";
     private static final String PREF_FORCE_DUAL_PANEL = "force_dualpanel";
     private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
-
+    private static final String PREF_VIBRATE_NOTIF_EXPAND = "vibrate_notif_expand";
     private static final int REQUEST_PICK_WALLPAPER = 201;
     private static final int REQUEST_PICK_CUSTOM_ICON = 202;
     private static final int REQUEST_PICK_BOOT_ANIMATION = 203;
@@ -111,6 +111,7 @@ public class UserInterface extends AOKPPreferenceFragment {
     TextView error;
     CheckBoxPreference mTabletui;
     CheckBoxPreference mDualpane;
+    CheckBoxPreference mVibrateOnExpand;
     Preference mLcdDensity;
     Preference mScroller;
 
@@ -214,6 +215,10 @@ public class UserInterface extends AOKPPreferenceFragment {
         mNotificationWallpaper = findPreference(PREF_NOTIFICATION_WALLPAPER);
 
         mWallpaperAlpha = (Preference) findPreference(PREF_NOTIFICATION_WALLPAPER_ALPHA);
+
+        mVibrateOnExpand = (CheckBoxPreference) findPreference(PREF_VIBRATE_NOTIF_EXPAND);
+        mVibrateOnExpand.setChecked(Settings.System.getBoolean(mContext.getContentResolver(),
+                Settings.System.VIBRATE_NOTIF_EXPAND, true));
 
         if (mTablet) {
             prefs.removePreference(mNotificationWallpaper);
@@ -434,7 +439,14 @@ public class UserInterface extends AOKPPreferenceFragment {
             ((PreferenceActivity) getActivity())
                     .startPreferenceFragment(new Scroller(), true);
             return true;
+        } else if (preference == mVibrateOnExpand) {
+            Settings.System.putBoolean(mContext.getContentResolver(),
+                    Settings.System.VIBRATE_NOTIF_EXPAND,
+                    ((CheckBoxPreference) preference).isChecked());
+            Helpers.restartSystemUI();
+            return true;
         }
+
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
