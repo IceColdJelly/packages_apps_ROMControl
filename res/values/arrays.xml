@@ -105,6 +105,8 @@
         <item>@string/icon_with_text</item>
         <item>@string/icon_with_centered_text</item>
         <item>@string/circlemod</item>
+        <item>@string/circle</item>
+        <item>@string/circle_percent</item>
         <item>@string/honeycomb_style</item>
         <item>@string/gummybar_style</item>
         <item>@string/dont_show</item>
@@ -118,6 +120,8 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
 
     <!-- NavBar -->

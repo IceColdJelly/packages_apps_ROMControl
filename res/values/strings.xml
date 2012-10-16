@@ -724,7 +724,9 @@
     <!-- Battery styles -->
     <string name="icon_with_text">Icon with text</string>
     <string name="icon_with_centered_text">Icon with centered text</string>
-    <string name="circlemod">CircleMOD</string>
+    <string name="circlemod">CircleMOD(themeable)</string>
+    <string name="circle">Circle</string>
+    <string name="circle_percent">Circle with percent</string>
     <string name="honeycomb_style">Honeycomb style</string>
     <string name="gummybar_style">GummyBar style</string>
 
