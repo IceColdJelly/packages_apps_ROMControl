@@ -77,16 +77,10 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="misc"
-        android:title="@string/misc_short">
-
+        android:key="tabletUI"
+        android:title="@string/tabletUI_cat">
 
          <CheckBoxPreference
-            android:key="rotate_180"
-            android:title="@string/rotate_180_title"
-            android:summary="@string/rotate_180_summary" />
-
-        <CheckBoxPreference
             android:key="mode_tabletui"
             android:title="@string/tablet_ui"
             android:summary="@string/tablet_ui_summary"
@@ -108,6 +102,17 @@
             android:key="lcd_density_setup"
             android:title="@string/lcd_density_title"
             android:summary="@string/lcd_density_summary" />
+
+     </PreferenceCategory>
+
+     <PreferenceCategory
+            android:key="misc"
+            android:title="@string/misc_short">
+
+         <CheckBoxPreference
+            android:key="rotate_180"
+            android:title="@string/rotate_180_title"
+            android:summary="@string/rotate_180_summary" />
 
         <CheckBoxPreference
             android:key="use_alt_resolver"
