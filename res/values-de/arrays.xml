@@ -75,18 +75,19 @@
         <item>Standard JB mit unsichtbaren wenn ausgeblendet</item>
     </string-array>
     <string-array name="navbar_button_entries">
-        <item>Home</item>
-        <item>Zurueck</item>
-        <item>Letzte</item>
-        <item>Suchen</item>
-        <item>Menue</item>
-        <item>Widgets wechseln</item>
-        <item>Öffnen IME Switcher</item>
-        <item>Anwendung beenden</item>
-        <item>Energie</item>
-        <item>Benachrichtigungen</item>
-        <item>Benutzerdefinierte Anwendung</item>
-        <item>Leer</item>
+        <item>@string/home</item>
+        <item>@string/back</item>
+        <item>@string/recents</item>
+        <item>@string/search</item>
+        <item>@string/screenshot</item>
+        <item>@string/menu</item>
+        <item>@string/toggle_widgets</item>
+        <item>@string/open_ime_switcher</item>
+        <item>@string/kill_app</item>
+        <item>@string/power</item>
+        <item>@string/notifications</item>
+        <item>@string/custom_app</item>
+        <item>@string/blank</item>
     </string-array>
     <string-array name="navigation_bar_width_entries">
         <item>42 dp (standard)</item>
