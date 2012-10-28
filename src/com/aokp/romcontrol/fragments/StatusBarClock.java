@@ -224,6 +224,8 @@ public class StatusBarClock extends AOKPPreferenceFragment implements
                 return getResources().getString(R.string.voiceassist);
             else if (uri.equals("**today**"))
                 return getResources().getString(R.string.today);
+            else if (uri.equals("**nothing**"))
+                return getResources().getString(R.string.nothing);
         } else {
             return mPicker.getFriendlyNameForUri(uri);
         }
