@@ -165,6 +165,8 @@
     <string name="alt_resolver_summary">Use Alternate (GB style) Default App Picker</string>
     <string name="status_bar_transparency_title">Statusbar Transparency</string>
     <string name="status_bar_transparency_summary">Adjust statusbar transparency</string>
+    <string name="notification_show_wifi_ssid_title">Show Wifi network name</string>
+    <string name="notification_show_wifi_ssid_summary">Display the name of the currently connected Wifi network</string>
 
     <!-- LCD Density -->
     <string name="lcd_density_title">LCD Density</string>
