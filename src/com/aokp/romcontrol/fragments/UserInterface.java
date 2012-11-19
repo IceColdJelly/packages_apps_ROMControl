@@ -125,6 +125,7 @@ public class UserInterface extends AOKPPreferenceFragment {
     CheckBoxPreference mVibrateOnExpand;
     Preference mLcdDensity;
     CheckBoxPreference mShowWifiName;
+    Preference mScroller;
 
     private AnimationDrawable mAnimationPart1;
     private AnimationDrawable mAnimationPart2;
@@ -148,6 +149,7 @@ public class UserInterface extends AOKPPreferenceFragment {
     int newDensityValue;
 
     DensityChanger densityFragment;
+    Scroller scrollerFragment;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -188,6 +190,9 @@ public class UserInterface extends AOKPPreferenceFragment {
         }
 
         mLcdDensity.setSummary(getResources().getString(R.string.current_lcd_density) + currentProperty);
+
+        mScroller = findPreference("scroll_setup");
+        mScroller.setSummary(R.string.scroll_summary);
 
         mCustomBootAnimation = findPreference("custom_bootanimation");
 
@@ -485,6 +490,10 @@ public class UserInterface extends AOKPPreferenceFragment {
             Settings.System.putBoolean(getActivity().getContentResolver(),
                     Settings.System.ACTIVITY_RESOLVER_USE_ALT,
                     isCheckBoxPrefernceChecked(preference));
+            return true;
+        } else if (preference == mScroller) {
+            ((PreferenceActivity) getActivity())
+                    .startPreferenceFragment(new Scroller(), true);
             return true;
         } else if (preference == mVibrateOnExpand) {
             Settings.System.putBoolean(mContext.getContentResolver(),
